@@ -133,9 +133,9 @@ function createObjCat(data){
     else{
       objCategories[firstWord(producto.category)].push(producto);
     }
+  });
   localStorage.setItem('objCategories', JSON.stringify(objCategories));
   localStorage.setItem('listCategories', JSON.stringify(listCategories));
-  });
 
 }
 function createCategoriesMenu(listCategories){

@@ -133,9 +133,9 @@ function createObjCat(data){
     else{
       objCategories[firstWord(producto.category)].push(producto);
     }
+  });
   localStorage.setItem('objCategories', JSON.stringify(objCategories));
   localStorage.setItem('listCategories', JSON.stringify(listCategories));
-  });
 
 }
 function createCategoriesContent(){
@@ -311,49 +311,46 @@ function createMenu(){
 
 
 const clickProduct = document.querySelector('.products');
-
-
 clickProduct.addEventListener('submit', (event)=>{
   const objCategories = JSON.parse(localStorage.getItem('objCategories')) || [];
-   event.preventDefault();
-   const formClick = event.target;
-   if(formClick.classList.contains('buyContent')){
-      if(formClick.querySelector('.prodQty').value>0 && formClick.querySelector('.prodQty').value<1000){
-         const fechaPedido = new Date().toISOString();
-         formClick.parentNode.querySelector('.imgContent').style.backgroundColor = '#ffff004d';
-         for(categ in objCategories){
-          objCategories[categ].forEach(item=>{
-            if(item.id == formClick.getAttribute('id')){
-              const objetProduct = {
-                category: item.category,
-                description: item.description,
-                id: item.id,
-                image: item.image,
-                price: parseFloat(item.price.toFixed(2)),
-                rating: {
-                  rate: item.rating.rate,
-                  count: item.rating.count,
-                },
-                qty: parseInt(formClick.querySelector('.prodQty').value),
-                buy: parseFloat(formClick.querySelector('.pPrice').innerText.slice(1)) * parseInt(formClick.querySelector('.prodQty').value),
-                imgHeight: formClick.parentNode.querySelector('img').getAttribute('height'),
-                cardColor: formClick.parentNode.querySelector('form').name,
-                dateBuy: fechaPedido,
-                title: formClick.parentNode.querySelector('img').getAttribute('alt'),
-                mostrarDescripcion: false,
-              };
-            console.log(objetProduct);
+  event.preventDefault();
+  const formClick = event.target;
+  if(formClick.classList.contains('buyContent')){
+    if(formClick.querySelector('.prodQty').value>0 && formClick.querySelector('.prodQty').value<1000){
+      const fechaPedido = new Date().toISOString();
+      formClick.parentNode.querySelector('.imgContent').style.backgroundColor = '#ffff004d';
+      for(const categ in objCategories){
+        objCategories[categ].forEach(item=>{
+          if(item.id == formClick.getAttribute('id')){
+            const objetProduct = {
+              category: item.category,
+              description: item.description,
+              id: item.id,
+              image: item.image,
+              price: parseFloat(item.price.toFixed(2)),
+              rating: {
+              rate: item.rating.rate,
+              count: item.rating.count,
+              },
+              qty: parseInt(formClick.querySelector('.prodQty').value),
+              buy: parseFloat(formClick.querySelector('.pPrice').innerText.slice(1)) * parseInt(formClick.querySelector('.prodQty').value),
+              imgHeight: formClick.parentNode.querySelector('img').getAttribute('height'),
+              cardColor: formClick.parentNode.querySelector('form').name,
+              dateBuy: fechaPedido,
+              title: formClick.parentNode.querySelector('img').getAttribute('alt'),
+              mostrarDescripcion: false,
+            };
             const buyList = (JSON.parse(localStorage.getItem('cart')) || []);
             buyList.push(objetProduct);
             localStorage.setItem('cart', JSON.stringify(buyList));
             cartCounter();
-            }
           }
-        )}
+        });
       }
     }
   }
-);
+}
+)
 clickProduct.addEventListener('click', (event)=>{
   const showClick = event.target;
   const imgProduct = JSON.parse(sessionStorage.getItem('imgProduct')) || [];
