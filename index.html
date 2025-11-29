@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>index</title>
+</head>
+<body>
+    <header id="header">
+        <a class="logo" href="./index.html"><img src="./img/logoHeader/logo.jpg" width="70" alt="logo"></a>
+        <div id="divH1" class="h1">
+            <h1 id="titulo">FOUR CATEGORIES STORE</h1>
+            <form class="search" id="search" action="./index.html" method="get">
+                <input class="" type="search" name="search" value="" placeholder="FOUR CATEGORIES STORE" id="textSearch" size="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="toggle">
+            <div class="claroOscuro" id="boton-claroOscuro"><i class="fa-solid fa-moon"></i></div>
+            <div class="tituloBusqueda" id="boton-tituloBusqueda"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <nav class="nav">
+            <ul class="navlist">
+                <li><a href="#categories">Categories</a>
+                    <ul class="dropdown-content">
+                    </ul>
+                </li>
+                <li id="liLoginMenu"><a href="./contact.html">Contact</a></li>
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./login.html">My Account</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./login.html">Log In</a></li>
+                        <li><a href="./register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="carrito">
+                        <li class="logoCarrito"><a href="./shoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li class="counterCarrito"><sub></sub></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainIndex">
+        <div class="bannersContent">
+            <div class="bannerDiv">
+                <img id="bFridayOne" src="./img/banners/blackFriday_3.jpg" alt="" class="banner">
+            </div>
+            <div class="bannerDiv">
+                <img id="bFridayTwo" src="./img/banners/blackFriday_2.jpg" alt="" class="banner">
+            </div>
+            <div class="bannerDiv">
+                <img id="bFridayThree" src="./img/banners/blackFriday_1.jpg" alt="" class="banner">
+            </div>
+            <div class="bannerDiv">
+                <img id="bFridayFour" src="./img/banners/blackFriday_0.jpg" alt="" class="banner">
+            </div>
+        </div>
+        <div>
+            <ul class="bannerList">
+                <li><button id="bF0">·</button></li>
+                <li><button id="bF1">·</button></li>
+                <li><button id="bF2">·</button></li>
+                <li><button id="bF3">·</button></li>
+            </ul>
+        </div>
+        <section class="categories">
+        </section>
+        <section class="products">
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="redes">
+            <ul>
+                <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" class="pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#" class="threads"><i class="fa-brands fa-threads"></i></a></li>
+                <li><a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="tyc">
+            <h5 class="lato-regular">TERMS & CONDITIONS</h5>
+            <p class="lato-regular">@2025 <strong class="lato-black">4Categories Store</strong> | All Rights Reserved</p>
+        </div>
+        <div class="chat">
+            <a class="whatsapp" href="https://wa.me/34696035156" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a class="telegram" href="https://t.me/germanolivesES02" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+            <div class="upDown">
+                <a class="home" href="#header"><i class="fa-solid fa-caret-up"></i></a>
+                <a class="foot" href="#footer"><i class="fa-solid fa-caret-down"></i></a>
+            </div>
+        </div>       
+    </footer>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
