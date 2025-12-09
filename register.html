@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>register</title>
+</head>
+<body>
+    <header id="header">
+        <a class="logo" href="./index.html"><img src="./img/logoHeader/logo.jpg" width="70" alt="logo"></a>
+        <div id="divH1" class="h1">
+            <h1 id="titulo">FOUR CATEGORIES STORE</h1>
+            <form class="search" id="search" action="./index.html" method="get">
+                <input class="" type="search" name="search" value="" placeholder="FOUR CATEGORIES STORE" id="textSearch" size="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="toggle">
+            <div class="claroOscuro" id="boton-claroOscuro"><i class="fa-solid fa-moon"></i></div>
+            <div class="tituloBusqueda" id="boton-tituloBusqueda"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <nav class="nav">
+            <ul class="navlist">
+                <li><a href="./index.html#categories">Categories</a>
+                    <ul class="dropdown-content">
+                    </ul>
+                </li>
+                <li id="liLoginMenu"><a href="./contact.html">Contact</a></li>
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a class="acaEstoy" href="./login.html">My Account</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./login.html">Log In</a></li>
+                        <li><a class="acaEstoy" href="./register.html">Register</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="carrito">
+                        <li class="logoCarrito"><a href="./shoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li class="counterCarrito"><sub></sub></li>
+                    </ul>
+                </li>
+                <!-- <li class="logoCarrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a><sub>0</sub></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="usuarios">
+        <form action="#" method="post" class="register">
+                <strong>CREATE ACCOUNT</strong>
+                <div class="datosUsuario">
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" id="lastname" required value="" size="35">
+                    </div>
+                    <div class="inputDos">
+                        <div class="input">  
+                            <label for="date">Birthdate</label>
+                            <input type="date" name="date" id="date" required value>
+                        </div>
+                        <div class="input"> 
+                            <label for="gender">Gender</label>
+                            <select class="input" name="gender" id="gender">
+                                <option class="input" value="x">X</option>
+                                <option class="input" value="female">Female</option>
+                                <option class="input" value="male">Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="mail">Email</label>
+                        <input type="mail" name="mail" id="mail" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" id="pass" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Repeat Password</label>
+                        <input type="password" name="pass" id="repeatpass" required value="" size="35">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div> 
+            </div>
+             
+        </form>
+        </section>
+    </main>
+    <footer id="footer" class="footerRegister">
+        <div class="redes">
+            <ul>
+                <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" class="pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#" class="threads"><i class="fa-brands fa-threads"></i></a></li>
+                <li><a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="tyc">
+            <h5 class="lato-regular">TERMS & CONDITIONS</h5>
+            <p class="lato-regular">@2025 <strong class="lato-black">4Categories Store</strong> | All Rights Reserved</p>
+        </div>
+        <div class="chat">
+            <a class="whatsapp" href="https://wa.me/34696035156" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a class="telegram" href="https://t.me/germanolivesES02" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+            <div class="upDown">
+                <a class="home" href="#header"><i class="fa-solid fa-caret-up"></i></a>
+                <a class="foot" href="#footer"><i class="fa-solid fa-caret-down"></i></a>
+            </div>
+        </div>       
+    </footer>
+    <script type="module" src="./js/shared.js"></script>
+</body>
+</html>
